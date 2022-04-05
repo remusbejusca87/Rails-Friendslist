@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-header">
+    <strong> Name:</strong>  <%= comment.name %> <br>
+    <strong> User Id:</strong>  <%= comment.user_id %>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"> <strong> Comment content: </strong> </h5>
+    <p class="card-text">
+    <%= comment.content %>
+    </p>
+    <%= link_to "Delete", [comment.post, comment], method: :delete, class:"btn btn-outline-danger",
+        data: {confirm: "Are you sure?"} %>
+  </div>
+</div> <br>
