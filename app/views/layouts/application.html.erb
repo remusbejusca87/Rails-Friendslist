@@ -13,7 +13,12 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <%= render 'home/header' %>
+    <% if user_signed_in?%>
+      <%= render 'home/header_user' %>
+    <% else %>
+      <%= render 'home/header_guest' %>
+    <% end %>
+    
     <div class="container">
       <br>
 
