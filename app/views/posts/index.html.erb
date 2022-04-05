@@ -21,7 +21,7 @@
                   <strong> By User: </strong>  <%= post.user_id %> <br>
                   <strong> Category: </strong>  <%= post.category.try(:category) %>
                 </p>
-                <%= link_to "Update", edit_post_path(post), class:"btn btn-primary" %>
+                <%= link_to "Edit", edit_post_path(post), class:"btn btn-primary" %>
               </div> 
             </div> 
         <% end %>
